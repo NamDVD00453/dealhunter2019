@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  Required meta tags always come first  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DealHunter</title>
+    <!--  Font Awesome  -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/food-and-wine.png" type="image/x-icon">
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/food-and-wine.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/54b8069b16.js" crossorigin="anonymous"></script>
+    <!-- Custom styles -->
+    <style>
+        html *
+        {
+            font-family: 'Source Sans Pro', sans-serif; !important;
+        }
+
+        html,
+        body,
+        header
+        @media (max-width: 740px) {
+            html,
+            body,
+            header,
+            .jarallax {
+                height: 100vh;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            html,
+            body,
+            header,
+            .jarallax {
+                height: 100vh;
+            }
+        }
+
+        @media (min-width: 560px) and (max-width: 650px) {
+            header .jarallax h1 {
+                margin-bottom: 1.5rem !important;
+            }
+            header .jarallax h5 {
+                margin-bottom: 1.5rem !important;
+            }
+        }
+
+        .top-nav-collapse {
+            background-color: #ff8a80 !important;
+        }
+        .navbar:not(.top-nav-collapse) {
+            background: #fe3f44!important;
+        }
+        @media (max-width: 768px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #fe3f44!important;
+            }
+        }
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #fe7276!important;
+            }
+        }
+        h5 {
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body class="rgba-stylish-slight" style="font-family: 'Source Sans Pro', sans-serif; !important;">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0"></script>
+<!-- Main Navigation -->
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar py-0">
+        <div class="container smooth-scroll">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-gifts"><strong style="font-family: 'Source Sans Pro', sans-serif; !important;"> DealHunter</strong></i>
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <form class="form-inline  ml-5">
+                    <div class="label white-text">
+                        <i class="fas fa-search"></i>
+                        Tìm kiếm
+                    </div>
+                    <div class="md-form my-0">
+                        <input class="form-control mr-md-5 my-0 py-0" type="text" placeholder="sản phẩm, cửa hàng ..." aria-label="Search">
+                    </div>
+                    <div class="label white-text">
+                        <i class="fas fa-search-location"></i>
+                        khu vực
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-flat text-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Hà Nội</button>
+                        <div class="dropdown-menu dropdown-danger ml-5">
+                            <a class="dropdown-item" href="#">Hà Nội</a>
+                            <a class="dropdown-item" href="#">Tp Hồ Chí Minh</a>
+                            <a class="dropdown-item" href="#">Đã Nẵng</a>
+                            <a class="dropdown-item" href="#">Hải Phòng</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="ml-auto">
+                    <!--Facebook-->
+                    <a class="btn-floating btn-sm btn-fb mx-1" type="button" role="button"><i class="fab fa-facebook-f"></i></a>
+                    <!--Twitter-->
+                    <a class="btn-floating btn-sm btn-tw mx-1" type="button" role="button"><i class="fab fa-twitter"></i></a>
+                    <!--Google +-->
+                    <a class="btn-floating btn-sm btn-gplus mx-1" type="button" role="button"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+
+</header>
+<!-- Main Navigation -->
+
+<!-- Main Layout -->
+<main class="pt-5">
+
+    <div class="container pt-5">
+        <!-- Section: Team v.3 -->
+        <section id="team" class="section team-section pb-4 wow fadeIn" data-wow-delay="0.3s">
+            <div class="row">
+                <div class="col-3">
+                    <a class="btn btn-danger btn-lg btn-block mb-5">
+                        <i class="far fa-calendar-check mr-1"></i>
+                        Đặt chỗ ngay >>
+                    </a>
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action disabled text-center" disabled>
+                            <strong class="text-dark">Khám phá</strong>
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span>Đồ ăn</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </button>
+
+                        <button type="button" class="list-group-item list-group-item-action">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-cocktail"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span>Đồ uống</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </button>
+
+                        <button type="button" class="list-group-item list-group-item-action">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-store"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span>Cửa hàng</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </button>
+
+                        <button type="button" class="list-group-item list-group-item-action">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-hotdog"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span>Bình dân</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </button>
+
+                    </div>
+                    <div class="list-group mt-3">
+                        <button type="button" class="list-group-item list-group-item-action disabled text-center" disabled>
+                            <strong class="text-dark">Khám phá</strong>
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span>Đồ ăn</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </button>
+
+                        <button type="button" class="list-group-item list-group-item-action">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-cocktail"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span>Đồ uống</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </button>
+
+                        <button type="button" class="list-group-item list-group-item-action">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-store"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span>Cửa hàng</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </button>
+
+                        <button type="button" class="list-group-item list-group-item-action">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-hotdog"></i>
+                                </div>
+                                <div class="col-8">
+                                    <span>Bình dân</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-9">
+
+                    <h5 class="mx-auto text-center mb-2">
+                        <i class="far fa-calendar-check mr-1"></i>
+                        <span class="border-bottom border-danger">KHUYẾN MÃI HOT</span>
+                    </h5>
+
+                    <div class="row mt-3 mx-0">
+                        <div class="col-8 py-0">
+                            <div class="card card-img-overlay my-0 mx-0 px-0" style="height: 320px; background-image: url(https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                                <div class="text-white text-center  py-5 px-0">
+                                    <div class="py-2">
+
+                                        <!-- Content -->
+                                        <h2 class="card-title rgba-black-light h2 my-4 py-2">Foodhouse</h2>
+                                        <a class="btn rgba-black-light btn-rounded waves-effect"><i class="fas fa-bookmark"></i> <strong>Đặt chỗ</strong></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-4 px-0">
+                                <div class="card card-img my-0 mx-0" style="height: 160px; background-image: url(https://img.jamja.vn/jamja-prod/g-12.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                                    <div class="text-white text-center  py-3 px-0">
+                                        <div class="py-2">
+
+                                            <!-- Content -->
+                                            <h5 class="card-title rgba-black-light h5 my-2 py-2">TocoToco</h5>
+                                            <a class="btn rgba-black-light btn-rounded waves-effect"><i class="fas fa-bookmark"></i> <strong>Đặt chỗ</strong></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card card-img my-0 mx-0" style="height: 160px; background-image: url(https://img.jamja.vn/jamja-prod/ltt.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                                    <div class="text-white text-center  py-3 px-0">
+                                        <div class="py-2">
+
+                                            <!-- Content -->
+                                            <h5 class="card-title rgba-black-light h5 my-2 py-2">Leetea</h5>
+                                            <a class="btn rgba-black-light btn-rounded waves-effect"><i class="fas fa-bookmark"></i> <strong>Đặt chỗ</strong></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+
+                    <hr class="my-3">
+
+                    <h5 class="mx-auto text-center mt-2 mb-2">
+                        <i class="far fa-calendar-check mr-1"></i>
+                        <span class="border-bottom border-danger">ĐƯỢC YÊU THÍCH</span>
+                    </h5>
+
+                    <div class="row mt-3 mx-0">
+
+                        <div class="col-4">
+                            <div class="card card-img-overlay px-0" style="height: 160px; background-image: url(https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                                <div class="text-white text-center  py-3 px-0">
+                                    <div class="py-0">
+
+                                        <!-- Content -->
+                                        <h5 class="card-title rgba-black-light h5 my-2 py-2">Foodhouse</h5>
+                                        <a class="btn rgba-black-light btn-rounded waves-effect"><i class="fas fa-bookmark"></i> <strong>Đặt chỗ</strong></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="card card-img-overlay px-0" style="height: 160px; background-image: url(https://img.jamja.vn/jamja-prod/g-12.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                                <div class="text-white text-center  py-3 px-0">
+                                    <div class="py-0">
+
+                                        <!-- Content -->
+                                        <h5 class="card-title rgba-black-light h5 my-2 py-2">TocoToco</h5>
+                                        <a class="btn rgba-black-light btn-rounded waves-effect"><i class="fas fa-bookmark"></i> <strong>Đặt chỗ</strong></a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-4">
+                            <div class="card card-img-overlay px-0" style="height: 160px; background-image: url(https://img.jamja.vn/jamja-prod/ltt.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                                <div class="text-white text-center  py-3 px-0">
+                                    <div class="py-0">
+
+                                        <!-- Content -->
+                                        <h5 class="card-title rgba-black-light h5 my-2 py-2">LeeTea</h5>
+                                        <a class="btn rgba-black-light btn-rounded waves-effect"><i class="fas fa-bookmark"></i> <strong>Đặt chỗ</strong></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <hr class="mt-3">
+
+
+
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+
+        <section id="products" class="text-center wow fadeIn" data-wow-delay="0.3s">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="https://img.jamja.vn/jamja-prod/jamja-web-banner-large-leaderboard-2280x256-9.jpg?cache=1"
+                             alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="https://img.jamja.vn/jamja-prod/jamja-cogaihiendai-web-banner-large-leaderboard-2280x256.jpg?cache=1"
+                             alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="https://img.jamja.vn/jamja-prod/jamja-bi-kip-tha-thinh-chung-web-banner-large-leaderboard-2280x256.jpg?cache=1"
+                             alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="https://img.jamja.vn/jamja-prod/jamja-web-banner-large-leaderboard-2280x256-3.jpg?cache=1"
+                             alt="Fourth-slide">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Features v.1 -->
+
+        <hr class="mt-5 mb-0">
+
+        <!-- Section: Gallery -->
+        <section id="gallery" class="section wow fadeIn" data-wow-delay="0.3s">
+
+            <h5 class="mx-auto text-left mt-2 mb-2">
+                <i class="far fa-calendar-check mr-1"></i>
+                <span class="border-bottom border-danger" >MỚI ĐẶT GẦN ĐÂY</span>
+            </h5>
+            <hr class="mt-0">
+
+            <div class="row">
+                <div class="col-4">
+                    <!-- Card -->
+                    <div class="card booking-card"  style="height: 520px">
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold"><a>FoodHouse</a></h4>
+                            <!-- Data -->
+                            <ul class="list-unstyled list-inline rating mb-0">
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i></li>
+                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                            </ul>
+                            <p class="mb-2"># • Nhà hàng, quán ăn</p>
+                            <!-- Text -->
+                            <p class="card-text">Giảm giá chỉ còn 129K Buffet Lẩu UFO trong khung giờ 10h30 - 12h30 & 17h30 - 18h30 (Giá Gốc 189K)</p>
+                            <hr class="my-4">
+                            <p class="lead"><strong>Khung giờ mở cửa</strong></p>
+                            <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip deep-purple white-text mr-0">10h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">17h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">19h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">21h30</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <div class="col-4">
+                    <!-- Card -->
+                    <div class="card booking-card"  style="height: 520px">
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold"><a>FoodHouse</a></h4>
+                            <!-- Data -->
+                            <ul class="list-unstyled list-inline rating mb-0">
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i></li>
+                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                            </ul>
+                            <p class="mb-2"># • Nhà hàng, quán ăn</p>
+                            <!-- Text -->
+                            <p class="card-text">Giảm giá chỉ còn 129K Buffet Lẩu UFO trong khung giờ 10h30 - 12h30 & 17h30 - 18h30 (Giá Gốc 189K)</p>
+                            <hr class="my-4">
+                            <p class="lead"><strong>Khung giờ mở cửa</strong></p>
+                            <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip deep-purple white-text mr-0">10h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">17h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">19h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">21h30</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <div class="col-4">
+                    <!-- Card -->
+                    <div class="card booking-card"  style="height: 520px">
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold"><a>FoodHouse</a></h4>
+                            <!-- Data -->
+                            <ul class="list-unstyled list-inline rating mb-0">
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i></li>
+                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                            </ul>
+                            <p class="mb-2"># • Nhà hàng, quán ăn</p>
+                            <!-- Text -->
+                            <p class="card-text">Giảm giá chỉ còn 129K Buffet Lẩu UFO trong khung giờ 10h30 - 12h30 & 17h30 - 18h30 (Giá Gốc 189K)</p>
+                            <hr class="my-4">
+                            <p class="lead"><strong>Khung giờ mở cửa</strong></p>
+                            <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip deep-purple white-text mr-0">10h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">17h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">19h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">21h30</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-4">
+                    <!-- Card -->
+                    <div class="card booking-card"  style="height: 520px">
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold"><a>FoodHouse</a></h4>
+                            <!-- Data -->
+                            <ul class="list-unstyled list-inline rating mb-0">
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i></li>
+                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                            </ul>
+                            <p class="mb-2"># • Nhà hàng, quán ăn</p>
+                            <!-- Text -->
+                            <p class="card-text">Giảm giá chỉ còn 129K Buffet Lẩu UFO trong khung giờ 10h30 - 12h30 & 17h30 - 18h30 (Giá Gốc 189K)</p>
+                            <hr class="my-4">
+                            <p class="lead"><strong>Khung giờ mở cửa</strong></p>
+                            <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip deep-purple white-text mr-0">10h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">17h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">19h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">21h30</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <div class="col-4">
+                    <!-- Card -->
+                    <div class="card booking-card"  style="height: 520px">
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold"><a>FoodHouse</a></h4>
+                            <!-- Data -->
+                            <ul class="list-unstyled list-inline rating mb-0">
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i></li>
+                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                            </ul>
+                            <p class="mb-2"># • Nhà hàng, quán ăn</p>
+                            <!-- Text -->
+                            <p class="card-text">Giảm giá chỉ còn 129K Buffet Lẩu UFO trong khung giờ 10h30 - 12h30 & 17h30 - 18h30 (Giá Gốc 189K)</p>
+                            <hr class="my-4">
+                            <p class="lead"><strong>Khung giờ mở cửa</strong></p>
+                            <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip deep-purple white-text mr-0">10h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">17h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">19h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">21h30</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <div class="col-4">
+                    <!-- Card -->
+                    <div class="card booking-card"  style="height: 520px">
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold"><a>FoodHouse</a></h4>
+                            <!-- Data -->
+                            <ul class="list-unstyled list-inline rating mb-0">
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i></li>
+                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                            </ul>
+                            <p class="mb-2"># • Nhà hàng, quán ăn</p>
+                            <!-- Text -->
+                            <p class="card-text">Giảm giá chỉ còn 129K Buffet Lẩu UFO trong khung giờ 10h30 - 12h30 & 17h30 - 18h30 (Giá Gốc 189K)</p>
+                            <hr class="my-4">
+                            <p class="lead"><strong>Khung giờ mở cửa</strong></p>
+                            <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip deep-purple white-text mr-0">10h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">17h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">19h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">21h30</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-4">
+                    <!-- Card -->
+                    <div class="card booking-card"  style="height: 520px">
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold"><a>FoodHouse</a></h4>
+                            <!-- Data -->
+                            <ul class="list-unstyled list-inline rating mb-0">
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i></li>
+                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                            </ul>
+                            <p class="mb-2"># • Nhà hàng, quán ăn</p>
+                            <!-- Text -->
+                            <p class="card-text">Giảm giá chỉ còn 129K Buffet Lẩu UFO trong khung giờ 10h30 - 12h30 & 17h30 - 18h30 (Giá Gốc 189K)</p>
+                            <hr class="my-4">
+                            <p class="lead"><strong>Khung giờ mở cửa</strong></p>
+                            <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip deep-purple white-text mr-0">10h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">17h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">19h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">21h30</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <div class="col-4">
+                    <!-- Card -->
+                    <div class="card booking-card"  style="height: 520px">
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold"><a>FoodHouse</a></h4>
+                            <!-- Data -->
+                            <ul class="list-unstyled list-inline rating mb-0">
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i></li>
+                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                            </ul>
+                            <p class="mb-2"># • Nhà hàng, quán ăn</p>
+                            <!-- Text -->
+                            <p class="card-text">Giảm giá chỉ còn 129K Buffet Lẩu UFO trong khung giờ 10h30 - 12h30 & 17h30 - 18h30 (Giá Gốc 189K)</p>
+                            <hr class="my-4">
+                            <p class="lead"><strong>Khung giờ mở cửa</strong></p>
+                            <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip deep-purple white-text mr-0">10h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">17h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">19h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">21h30</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <div class="col-4">
+                    <!-- Card -->
+                    <div class="card booking-card"  style="height: 520px">
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img.jamja.vn/jamja-prod/cov-tenmc-555.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <!-- Title -->
+                            <h4 class="card-title font-weight-bold"><a>FoodHouse</a></h4>
+                            <!-- Data -->
+                            <ul class="list-unstyled list-inline rating mb-0">
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i></li>
+                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                            </ul>
+                            <p class="mb-2"># • Nhà hàng, quán ăn</p>
+                            <!-- Text -->
+                            <p class="card-text">Giảm giá chỉ còn 129K Buffet Lẩu UFO trong khung giờ 10h30 - 12h30 & 17h30 - 18h30 (Giá Gốc 189K)</p>
+                            <hr class="my-4">
+                            <p class="lead"><strong>Khung giờ mở cửa</strong></p>
+                            <ul class="list-unstyled list-inline d-flex justify-content-between mb-0">
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip deep-purple white-text mr-0">10h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">17h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">19h30</div>
+                                </li>
+                                <li class="list-inline-item mr-0">
+                                    <div class="chip mr-0">21h30</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+            </div>
+
+        </section>
+        <!-- /Section: Gallery -->
+
+        <hr class="my-5">
+
+        <!-- Section: Contact v.2 -->
+        <section id="contact" class="section pb-5 wow fadeIn" data-wow-delay="0.3s">
+
+            <!-- Section heading -->
+            <h2 class="font-weight-bold text-center h1 my-5">Liên hệ</h2>
+            <!-- Section description -->
+            <p class="text-center grey-text mb-5 mx-auto w-responsive">DealHunter là trang tổng hợp mã giảm giá lớn nhất thế giới được thiết kế và hoạt động bởi FOCUSTEAM cùng đồng bọn. Hãy để lại liên hệ để nhận được nhiều thông tin giảm giá hơn</p>
+
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-8 col-xl-9">
+                    <form>
+
+                        <!-- Grid row -->
+                        <div class="row">
+
+                            <!-- Grid column -->
+                            <div class="col-md-6">
+                                <div class="md-form">
+                                    <input type="text" id="contact-name" class="form-control">
+                                    <label for="contact-name" class="">Tên đầy đủ</label>
+                                </div>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-6">
+                                <div class="md-form">
+                                    <input type="text" id="contact-email" class="form-control">
+                                    <label for="contact-email" class="">Email của bạn</label>
+                                </div>
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                        <!-- Grid row -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <input type="text" id="contact-Subject" class="form-control">
+                                    <label for="contact-Subject" class="">Món ăn (đồ uống) yêu thích</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Grid row -->
+
+                        <!-- Grid row -->
+                        <div class="row mb-4">
+
+                            <!-- Grid column -->
+                            <div class="col-md-12">
+
+                                <div class="md-form">
+                                    <textarea type="text" id="contact-message" class="md-textarea form-control" rows="3"></textarea>
+                                    <label for="contact-message">Để lại ý kiến phát triển website</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Grid row -->
+
+                    </form>
+
+                    <div class="text-center text-md-left mb-4">
+                        <a class="btn btn-light-blue">Gửi</a>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-xl-3">
+                    <ul class="contact-icons text-center list-unstyled">
+                        <li><i class="fa fa-map-marker fa-2x"></i>
+                            <p>Số 8A Tôn Thất Thuyết, Mỹ Đình, Nam Từ Liêm, Hà Nội</p>
+                        </li>
+
+                        <li><i class="fa fa-phone fa-2x"></i>
+                            <p>+84 988 123 123</p>
+                        </li>
+
+                        <li><i class="fa fa-envelope fa-2x"></i>
+                            <p>admin@dealhunter.vn</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+
+        </section>
+        <!-- Section: Contact v.2 -->
+
+    </div>
+
+</main>
+<!-- Main Layout -->
+
+<!-- Footer -->
+<footer class="page-footer pt-4 mt-4 red accent-1 text-center text-md-left">
+
+    <!-- Footer Links -->
+    <div class="container">
+        <div class="row">
+
+            <!-- First column -->
+            <div class="col-md-6">
+                <h6 class="text-uppercase font-weight-bold">About DealHunter</h6>
+                <p>DEALHUNTER là kênh tổng hợp tin khuyến mãi chuyên nghiệp đầu tiên ở Việt Nam, cho phép bạn tìm kiếm mã giảm giá, tin ưu đãi từ đa dạng lĩnh vực thời trang, nhà hàng, làm đẹp và web mua sắm. Và còn rất nhiều mã giảm giá độc quyền dành riêng cho bạn.</p>
+            </div>
+            <!-- First column -->
+
+            <!-- Second column -->
+            <div class="col-md-3">
+                <h6 class="text-uppercase font-weight-bold">Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#!">Trang chủ</a></li>
+                    <li><a href="#!">Liên hệ</a></li>
+                    <li><a href="#!">Góp ý</a></li>
+                </ul>
+            </div>
+            <!-- Second column -->
+
+            <!-- Third column -->
+            <div class="col-md-3">
+                <div class="fb-page"
+                     data-href="https://www.facebook.com/focusteamvn/"
+                     data-width="380"
+                     data-hide-cover="false"
+                     data-show-facepile="false"></div>
+            </div>
+
+            <!-- Third column -->
+        </div>
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright py-3 text-center">
+        <div class="container-fluid">
+            &copy; 2018 Copyright: <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> MDBootstrap.com </a>
+
+        </div>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<!--  SCRIPTS  -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script>
+    new WOW().init();
+
+    // MDB Lightbox Init
+    $(function () {
+        $("#mdb-lightbox-ui").load("../mdb-addons/mdb-lightbox-ui.html");
+    });
+
+</script>
+
+</body>
+</html>
