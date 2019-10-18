@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div id="content">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Store Manager</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-12">
+                <div id="storeDetail" class="card shadow mb-4">
+                    <!-- Card Header - Accordion -->
+                    <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button"
+                       aria-expanded="true" aria-controls="collapseCardExample">
+                        <h6 class="m-0 font-weight-bold text-primary">#13 Nhà hàng King BBQ (kingbbq@dealhunter.tk)</h6>
+                    </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCardExample">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img class="img-thumbnail"
+                                         src="https://img.jamja.vn/jamja-prod/gcs_full_58558dc276ec5726805ac119-2016-12-17-191100.png"
+                                         alt="">
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless" width="100%" cellspacing="0">
+                                            <tbody>
+                                            <tr>
+                                                <td>Store type</td>
+                                                <td>nha-hang-king-bbq</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Path</td>
+                                                <td>nha-hang-king-bbq</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td>nha-hang-king-bbq</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone</td>
+                                                <td>nha-hang-king-bbq</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Create</td>
+                                                <td>nha-hang-king-bbq</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Status</td>
+                                                <td><strong class="text-success">ACTIVE</strong></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h1 class="h5 mb-2 text-gray-800">Address list</h1>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead class="bg-gray-200">
+                                            <tr>
+                                                <th>#ID</th>
+                                                <th>Address</th>
+                                                <th>City</th>
+                                                <th>Description</th>
+                                                <th>Created</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>#8</td>
+                                                <td>8A Hàng Tre, P. Lý Thái Tổ, Q. Hoàn Kiếm, HN</td>
+                                                <td>Hà Nội</td>
+                                                <td></td>
+                                                <td>05:48:09 13/10/2019</td>
+                                                <td><strong class="text-success">ACTIVE</strong></td>
+                                                <td>
+                                                    <button class="btn btn-flat bg-danger"><strong class="text-white">Deactive
+                                                        now</strong></button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script>
+            $(document).ready(handlLoad());
+
+            function handlLoad() {
+                if (document.cookie.indexOf("token") >= 0) {
+                    $("#username").text($.cookie("email"));
+                    $("#avatar").attr("src", $.cookie("avatar"));
+                    var listAcc = $("#listAcc");
+                    listAcc.html('');
+
+                    $.get("component/baseUrl.conf", function (config) {
+                        url = config + 'api/admin/stores';
+                        $.ajax({
+                            url: url,
+                            method: 'GET',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                Authorization: $.cookie("token"),
+                            },
+                            success: function (data) {
+                                var storeDetail = $("#storeDetail")
+                                storeDetail.html('');
+                                $.each(data.data, function (i, v) {
+                                    var status = '<strong class="text-success">ACTIVE</strong>';
+                                    var btnStatus = '<button id="deactive" onclick="handlClick($(this))" tag="' + v.id + '" class="btn btn-flat bg-danger"><strong class="text-white">Deactive now</strong></button>';
+                                    if (v.status == 0) {
+                                        status = '<strong class="text-danger">INACTIVE</strong>';
+                                        btnStatus = '<button id="active" onclick="handlClick($(this))" tag="' + v.id + '" class="btn btn-flat bg-success"><strong class="text-white">Active now</strong></button>';
+                                    }
+
+                                    var first = '<a href="#collap' + v.id + '" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCardExample">' +
+                                        '<h6 class="m-0 font-weight-bold text-primary">#' + v.id + ' ' + v.name + '</h6></a>' +
+                                        '<div class="collapse show" id="collap' + v.id + '">\n' +
+                                            '                        <div class="card-body">\n' +
+                                            '                            <div class="row">\n' +
+                                            '                                <div class="col-3 text-center">\n' +
+                                            '                                    <img class="img-thumbnail" src="' + v.image + '" alt="">\n' +
+                                            '                                    <div class="table-responsive">\n' +
+                                            '                                        <table class="table table-borderless" width="100%" cellspacing="0">' +
+                                        '<tbody>\n' +
+                                        '                                            <tr>\n' +
+                                        '                                                <td>Store type</td>\n' +
+                                        '                                                <td>' + v.typeStore + '</td>\n' +
+                                        '                                            </tr>\n' +
+                                        '                                            <tr>\n' +
+                                        '                                                <td>Path</td>\n' +
+                                        '                                                <td>' + v.nameUnAccent + '</td>\n' +
+                                        '                                            </tr><tr>\n' +
+                                        '                                                <td>Email</td>\n' +
+                                        '                                                <td>' + v.email + 'v.email</td>\n' +
+                                        '                                            </tr><tr>\n' +
+                                        '                                                <td>Phone</td>\n' +
+                                        '                                                <td>' + v.phone + '</td>\n' +
+                                        '                                            </tr>\n' +
+                                        '                                            <tr>\n' +
+                                        '                                                <td>Create</td>\n' +
+                                        '                                                <td>' + v.created + '</td>\n' +
+                                        '                                            </tr>\n' +
+                                        '                                            <tr>\n' +
+                                        '                                                <td>Status</td>\n' +
+                                        '                                                <td>' + status + '</td>\n' +
+                                        '                                            </tr>\n' +
+                                        '                                            <tr>\n' +
+                                        '                                                <td>Action</td>\n' +
+                                        '                                                <td>' + btnStatus + '</td>\n' +
+                                        '                                            </tr>\n' +
+                                        '                                            </tbody>\n' +
+                                        '                                        </table>\n' +
+                                        '</div></div>' +
+                                        '<div class="col-9">\n' +
+                                        '<h1 class="h5 mb-2 text-gray-800">Address list</h1>\n' +
+                                        '<div class="table-responsive">\n' +
+                                        '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">\n' +
+                                        '<thead class="bg-gray-200">\n' +
+                                        '<tr>\n' +
+                                        '<th>#ID</th>\n' +
+                                        '<th>Address</th>\n' +
+                                        '<th>City</th>\n' +
+                                        '<th>Description</th>\n' +
+                                        '<th>Created</th>\n' +
+                                        '<th>Status</th>\n' +
+                                        '<th>Action</th>\n' +
+                                        '</tr>\n' +
+                                        '</thead>\n' +
+                                        '<tbody>';
+                                    var tableData = ''
+                                    $.each(data.data[i].storeAddresses, function (j, add) {
+                                        tableData = tableData + '<tr>\n' +
+                                            '                                                <td>#' + add.id + '</td>' +
+                                            '<td>' + add.address + '</td>' +
+                                            '<td>' + add.city + '</td>' +
+                                            '<td>' + add.description + '</td>' +
+                                            '<td>' + add.created + '</td>'
+                                        var statusAddr = '<td><strong class="text-success">ACTIVE</strong></td>' +
+                                            '<td><button id="deactive" onclick="handlAddrClick($(this))" tag="' + add.id + '" class="btn btn-flat bg-danger"><strong class="text-white">Deactive now</strong></button></td></tr>';
+                                        if (add.status == 0) {
+                                            statusAddr = '<td><strong class="text-danger">INACTIVE</strong></td>' +
+                                                '<td><button id="active" onclick="handlAddrClick($(this))" tag="' + add.id + '" class="btn btn-flat bg-success"><strong class="text-white">Active now</strong></button></td></tr>';
+                                        }
+                                        tableData = tableData + statusAddr;
+                                    });
+
+
+                                    var last = '</tbody>\n' +
+                                            '                                        </table>\n' +
+                                            '                                    </div>\n' +
+                                            '                                </div>\n' +
+                                            '                            </div>\n' +
+                                            '                        </div>\n' +
+                                            '                    </div>';
+
+                                    storeDetail.append(first + tableData + last);
+                                });
+                            },
+                            error: function (xhr, option, e) {
+                                if (xhr.status == 401) {
+                                    $.removeCookie("token");
+                                    window.location.href = 'login.html';
+                                } else {
+                                    alert("Internal server error!");
+                                }
+                            }
+
+                        });
+                    })
+                } else window.location.href = 'login.html';
+
+            };
+
+            function handlLogout() {
+                $.removeCookie("token");
+                $.removeCookie("email");
+                $.removeCookie("avatar");
+                $.removeCookie("component");
+                window.location.href = 'login.html';
+            }
+
+            function handlClick($this) {
+                console.log($($this).attr('tag') + ' - ' + $($this).attr('id'));
+                var status = 0;
+                var id = $($this).attr('tag');
+                var url = '';
+                if ($($this).attr('id') == 'active') {
+                    status = 1
+                }
+                ;
+                $.get("component/baseUrl.conf", function (config) {
+                    url = config + 'api/admin/store/' + id + '/' + status;
+
+                    $.ajax({
+                        url: url.replace(/(\r\n|\n|\r)/gm, ""),
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            Authorization: $.cookie("token"),
+                        },
+                        success: function (data) {
+                            alert('Store: ' + data.data.name + ' updated!');
+                            handlLoad();
+                            location.reload();
+                        },
+                        error: function (xhr, option, e) {
+                            if (xhr.status == 401) {
+                                $.removeCookie("token");
+                                window.location.href = 'login.html';
+                            } else {
+                                alert("Internal server error!");
+                            }
+                        }
+
+                    });
+                })
+            }
+
+            function handlAddrClick($this) {
+                console.log($($this).attr('tag') + ' - ' + $($this).attr('id'));
+                var status = 0;
+                var id = $($this).attr('tag');
+                var url = '';
+                if ($($this).attr('id') == 'active') {
+                    status = 1
+                }
+                ;
+                $.get("component/baseUrl.conf", function (config) {
+                    url = config + 'api/admin/store/store-address/' + id + '/' + status;
+                    $.ajax({
+                        url: url.replace(/(\r\n|\n|\r)/gm, ""),
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            Authorization: $.cookie("token"),
+                        },
+                        success: function (data) {
+                            alert('Store Address: ' + data.data.address + ' updated!');
+                            handlLoad();
+                            location.reload();
+                        },
+                        error: function (xhr, option, e) {
+                            if (xhr.status == 401) {
+                                $.removeCookie("token");
+                                window.location.href = 'login.html';
+                            } else {
+                                alert("Internal server error!");
+                            }
+                        }
+
+                    });
+                })
+            }
+        </script>
+    </div>
+</div>
+</body>
+</html>

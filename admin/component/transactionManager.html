@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="content">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Voucher Manager</h1>
+                    <a href="javascript:void(0)" onclick="collapseAll()" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Collapse All</a>
+                </div>
+
+                <!-- Content Row -->
+                <div class="row">
+                    <div id="tableDetail" class="col-12">
+
+
+
+                    </div>
+                </div>
+
+                <script>
+                    $(document).ready(handlLoad());
+                    function handlLoad() {
+                        if (document.cookie.indexOf("token") >= 0) {
+                            $("#username").text($.cookie("email"));
+                            $("#avatar").attr("src",$.cookie("avatar"));
+                            var listAcc = $("#listAcc");
+                            listAcc.html('');
+
+                            $.get("component/baseUrl.conf", function (config) {
+                                url = config + 'api/admin/stores/transactions';
+                                console.log(url.replace(/(\r\n|\n|\r)/gm, ""));
+                                $.ajax({
+                                    url: url,
+                                    method: 'GET',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                        Authorization: $.cookie("token"),
+                                    },
+                                    success: function (data) {
+                                        console.log(data.data);
+                                        var tableDetail = $("#tableDetail");
+                                        tableDetail.html('');
+                                        $.each(data.data, function (i, v) {
+                                                var btn = '';
+                                                var status = '';
+                                                if (v.status == '0') {
+                                                    status = '<strong class="text-warning">PENDING</strong>';
+                                                } else if (v.status == '1') {
+                                                    status = '<strong class="text-success">CONFIRM</strong>';
+                                                } else {
+                                                    status = '<strong class="text-primary">FINISH</strong>';
+                                                }
+                                            tableDetail.append('<div class="card shadow mb-4">\n' +
+                                                '                            <!-- Card Header - Accordion -->\n' +
+                                                '                            <a href="#collapse' + v.id + '" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">\n' +
+                                                '                                <h6 class="m-0 font-weight-bold text-primary">#Order' + v.id + v.codeId + '<strong class="text-success font-italic">(' + v.time + v.day + ')</strong></h6>\n' +
+                                                '                            </a>\n' +
+                                                '                            <!-- Card Content - Collapse -->\n' +
+                                                '                            <div class="collapse show" id="collapse' + v.id + '">\n' +
+                                                '                                <div class="card-body">\n' +
+                                                '                                    <div class="row">\n' +
+                                                '                                        <div class="col-4">\n' +
+                                                '                                            <p>Username: <strong class="text-success">' + v.guestName + '</strong></p>\n' +
+                                                '                                            <hr>\n' +
+                                                '                                            <p>Phone number: <strong class="text-success">' + v.guestPhone + '</strong></p>\n' +
+                                                '                                            <p>Email: <strong class="text-success">' + v.guestEmail + '</strong></p>\n' +
+                                                '                                            <p>Present time: <strong class="text-success">' + v.time + v.day + '</strong></p>\n' +
+                                                '                                            <p>Adults slots: <strong class="text-success">' + v.adults + '</strong></p>\n' +
+                                                '                                            <p>Child slots: <strong class="text-success">' + v.children + '</strong></p>\n' +
+                                                '                                        </div>\n' +
+                                                '                                        <div class="col-8">\n' +
+                                                '                                            <p>Store: <strong class="text-success">' + v.storeName + '</strong></p>\n' +
+                                                '                                            <hr>\n' +
+                                                '                                            <p>Store address: <strong class="text-success">' + v.storeAddress + '</strong></p>\n' +
+                                                '                                            <p>Voucher code: <strong class="text-success">' + v.code + '</strong></p>\n' +
+                                                '                                            <p>Discord percent: <strong class="text-success">' + v.sale + '</strong></p>\n' +
+                                                '                                            <p>Note: <strong class="text-success">' + v.description + '</strong></p>\n' +
+                                                '                                            <p>Status: ' + status + '</p>\n' +
+                                                '                                        </div>\n' +
+                                                '                                    </div>\n' +
+                                                '                                </div>\n' +
+                                                '                            </div>\n' +
+                                                '                        </div>');
+                                        })
+                                    },
+                                    error: function (xhr, option, e) {
+                                        if (xhr.status == 401){
+                                            $.removeCookie("token");
+                                            window.location.href = 'login.html';
+                                        } else {
+                                            alert("Internal server error!");
+                                        }
+                                    }
+
+                                });
+                            })
+
+
+                        }
+                        else window.location.href = 'login.html';
+                    };
+                    function handlLogout() {
+                        $.removeCookie("token");
+                        $.removeCookie("email");
+                        $.removeCookie("avatar");
+                        $.removeCookie("component");
+                        window.location.href = 'login.html';
+                    }
+
+                    function handlClick($this) {
+                        alert('Ke cho thang store update!');
+                    }
+                    
+                    function collapseAll() {
+                        $('.collapse').collapse('toggle');
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
